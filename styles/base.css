@@ -1,0 +1,7 @@
+div:focus, span:focus,h1:focus, h2:focus, h3:focus,
+h4:focus, h5:focus, h6:focus, p:focus, a:focus,
+img:focus, ol:focus, ul:focus, li:focus,
+label:focus, section:focus, video:focus{
+    outline: none;
+    box-shadow: 0 0 0 4px #ffffff;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuito da Terra</title>
+    <link rel="icon" href="imgs/logo/logo-semfundo.svg">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --color: #000;
+            --bg-color: #f9f9f9;
+            --cor-destaque: #ffd900;
+        }
+
+        :root:has(#bnt-modoEscuro:checked) {
+            --color: white;
+            --bg-color: #101010;
+        }
+
+        * {
+            transition: background-color 0.3s, color 0.2s;
+        }
+
+        body {
+            background-color: var(--bg-color);
+        }
+
+    .meuCheckbox{
+        opacity: 0;
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+       
+    .primeira-dobra {
+        box-sizing: border-box;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        width: 100%;
+        height: 70vh;
+        background-image:
+            radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0.9) 100%),
+            url(imgs/backgrounds/g.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    main{
+            padding-top: 58px;
+        }
+
+    .primeira-dobra p{
+        font-size: 13vw;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .primeira-dobra{
+            height: 50vh;
+        }
+
+    }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a tabindex="1" class="desktop" href="#">
+            <img style="width:100%;" src="imgs/logo/logo grande.svg" alt="">
+        </a>
+        <nav>
+            <div class="mobile">
+                <input type="checkbox" id="menu-hamburguer-toggle">
+                <label for="menu-hamburguer-toggle" class="menu-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <a href="#">
+                    <img  style="width:100%; " src="imgs/logo/logo-semfundo.svg" alt="">
+                </a>
+                <div class="nav-item-mobile">
+                    <a href="#" class="nav-item">home</a>
+                    <a href="#" class="nav-item">home</a>
+                    <a href="#" class="nav-item">home</a>
+                </div>
+            </div>
+
+            <div class="desktop">
+                <a tabindex="2" href="#" class="nav-item">home</a> <p>|</p>
+                <a tabindex="3" href="#" class="nav-item">home</a> <p>|</p>
+                <a tabindex="4" href="#" class="nav-item">home</a>
+            </div>
+        </nav>
+        <div>
+            <input tabindex="5" class="meuCheckbox"  type="checkbox" name="modoEscuro" id="bnt-modoEscuro">
+            <label for="bnt-modoEscuro" id="bnt-trocar-modo"></label>
+        </div>
+    </header>
+    <main>
+        <section class="primeira-dobra">
+            <div>
+                <p>CIRCUITO</p>
+                <p>da terra</p>
+            </div>
+        </section>
+
+        <section class="carrosel">
+            <div>
+                
+            </div>
+
+        </section>
+        
+    </main>
+</body>
+</html>

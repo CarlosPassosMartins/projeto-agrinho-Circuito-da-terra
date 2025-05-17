@@ -1,0 +1,147 @@
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    background-color: #202020;
+    box-sizing: border-box;
+    padding: 7px 1rem;
+    z-index: 100;
+}
+
+.nav-item {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 15px;
+    color: white;
+}
+
+.nav-item:hover {
+    color: var(--cor-destaque);
+}
+
+nav div {
+    display: flex;
+}
+
+label:hover {
+    cursor: pointer;
+    color: var(--cor-destaque);
+}
+
+#bnt-trocar-modo::after {
+    content: "Modo Escuro";
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#bnt-modoEscuro:checked ~ #bnt-trocar-modo::after{
+    content: "Modo Claro";
+}
+
+#bnt-modoEscuro:focus ~ #bnt-trocar-modo{
+    border-radius: 15px;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: flex;
+}
+
+.menu-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    padding: 0 25px;
+    position: relative;
+}
+
+.menu-hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#menu-hamburguer-toggle {
+    display: none;
+}
+
+.nav-item-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #202020;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 0; 
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.nav-item-mobile a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-item-mobile a:hover {
+    color: var(--cor-destaque);
+}
+
+#menu-hamburguer-toggle:checked ~ .nav-item-mobile {
+    display: flex;
+    height: auto;
+    max-height: 500px;
+}
+#menu-hamburguer-toggle:checked + .menu-hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-hamburguer-toggle:checked + .menu-hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-hamburguer-toggle:checked + .menu-hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .mobile img{
+        margin-left: auto;
+    }
+    .menu-hamburger{
+        margin-right: auto;
+    }
+}
